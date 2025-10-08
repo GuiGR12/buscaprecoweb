@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="BP.css">
+    <title>Busca Preço - Cadastro</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+    <script src="jquery.js"></script>
+    <script src="BP.js"></script>
+</head>
+<body>
+    <div class="container" id="cabecalho"> 
+
+          <div class="row"> 
+
+              <div style="background-color: rgb(243, 113, 113);" class="col-md-12"> 
+                  <h1>Busca Preço</h1> 
+              </div> 
+              
+          </div> 
+       
+            <ul style="background-color: rgb(212, 189, 189);" class="nav"> 
+                <li class="nav-item"> 
+                    <a class="nav-link" href="/">Página Inicial</a> 
+                </li> 
+                <li class="nav-item"> 
+                    <a class="nav-link" href="/criarProdutoForm">Adicionar Produtos</a> 
+                </li> 
+                <li class="nav-item"> 
+                    <a class="nav-link" href="/listarProduto">Lista de Produtos</a> 
+                </li> 
+        </ul> 
+    </div>
+
+    <br>
+    <br>
+    
+    <div class="container" id="corpo"> 
+
+        <div class="row">
+
+            <div class="col-md-1">
+
+                
+            </div>
+
+            <div class="col-md-4">
+
+            <form method="post" th:action="@{/salvarProduto}" th:object="${produto}" action="#"> 
+                <div class="mb-3"> 
+                    <label for="txtProduto" class="form-label">Produto:</label> 
+                    <input id="txtProduto" th:field="*{nomeProduto}" class="form-control" type="text" placeholder="Nome do produto"> 
+                </div> 
+                <div class="mb-3"> 
+                    <label for="txtMarca" class="form-label">Marca:</label> 
+                    <input id="txtMarca" th:field="*{marca}" class="form-control" type="text" placeholder="Marca do produto"> 
+                </div> 
+                <div class="mb-3"> 
+                    <label for="txtPreço" class="form-label">Preço:</label> 
+                    <input id="txtPreço" th:field="*{preco}" class="form-control" type="text" placeholder="R$ 00,00"> 
+                </div> 
+                <div class="mb-3"> 
+                    <label for="txtQuantidade" class="form-label">Quantidade:</label> 
+                    <input id="txtQuantidade" th:field="*{quantidade}" class="form-control" type="text" placeholder="0"> 
+                </div>                 
+                <div class="mb-3"> 
+                    <label for="txtData" class="form-label">Data da Compra:</label> 
+                    <input id="txtData" th:field="*{dataCompra}" class="form-control" type="text" placeholder="00/00/0000"> 
+                </div> 
+                <div class="mb-3"> 
+                    <input type="submit" class="btn btn-primary" id="buttonCadastro" value="Cadastrar" onclick="cadastro()"> 
+                </div> 
+            </form> 
+        </div>
+
+        <div class="col-md-1">
+                <br>
+            </div>
+
+    </div>
+    </div>    
+    
+
+      <script src="bootstrap/js/bootstrap.bundle.min.js">
+        
+      </script>
+</body>
+</html>
