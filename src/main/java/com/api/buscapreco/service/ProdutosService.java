@@ -70,6 +70,12 @@ public class ProdutosService {
 
         produtosRepository.deleteById(produto.getId());
 
-    }
+    }  
     
+    public List<ProdutosEntity> listarTodosProdutosPorNome(String nomeProduto) {
+
+        return produtosRepository.findByNomeProdutoContainingIgnoreCase(nomeProduto);
+
+    }
+        
 }

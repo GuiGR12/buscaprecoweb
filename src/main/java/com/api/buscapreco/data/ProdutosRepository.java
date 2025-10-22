@@ -11,6 +11,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ProdutosRepository extends JpaRepository<ProdutosEntity, Integer> {
     
-    List<ProdutosEntity> findByNomeProduto(String nome); 
+    List<ProdutosEntity> findByNomeProduto(String nomeProduto); 
+
+    List<ProdutosEntity> findByNomeProdutoContainingIgnoreCase(String nomeProduto);
     
 }

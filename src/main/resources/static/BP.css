@@ -16,3 +16,39 @@
     background-color: rgb(76, 88, 74);
 
 }
+
+.form-control {
+
+    border: none;
+    outline: none;
+    padding: 6px 12px;
+    font-size: 1rem;
+    flex-grow: 1;
+    background-color: transparent;
+
+}
+
+.form-button {
+
+    margin: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 5px;
+    background-color: rgb(76, 88, 74);
+    color:aliceblue;
+
+}
+
+.form-main {
+
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    background-color: #f8f8f8;
+    width: 300px;
+
+}
